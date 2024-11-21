@@ -41,6 +41,7 @@ Create an Azure Container Registry (ACR) to hold container images for your AKS c
 
 **STEP 5**<p>
 This set of commands will create an AKS cluster with a single general-purpose compute node and connect it to your ACR then it will add credentials to your local system to allow the usage of kubectl commands
+    
     az aks create --resource-group $aksrg --name $aksclustername --node-count 1 --generate-ssh-keys --attach-acr $acrname
     az aks get-credentials --resource-group $aksrg --name $aksclustername
 
